@@ -23,7 +23,7 @@ body{
     align-items: center;
     
 }
-div p, h1{
+div p, h1, .final{
     font-size: xx-large;
     color:white;
     text-shadow: 
@@ -51,4 +51,24 @@ button:active{
 h1{
    
     text-align:center ;
+}
+
+
+
+.final {
+    visibility: hidden;
+    color: orange;
+    text-align:center ;
+    margin-top: 2em;
+    font-size: 24px;
+    font-weight: bold;
+    animation: escalado 1.5s infinite ease-in-out;
+}    
+@keyframes escalado {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
 }

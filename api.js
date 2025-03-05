@@ -55,19 +55,25 @@ async function cargarDatos(origen){
         
 }
 async function cambiarPersonaje(otraImagen,otroNombre){
-    if(personajes.length > 0){
+    if(personajes.length > 1){
         indiceActual = parseInt(otraImagen.getAttribute('data-index'));
-        if(indiceActual + 1 < personajes.length){
+        if (indiceActual +1  >= personajes.length ) {
+            console.warn("No hay más personajes disponibles.");
+            console.log(personajes.length)
+            document.querySelector("final").style.visibility = "visible";
+            console.log("juego terminado");
+            return; // Evita que intente acceder a un índice inexistente
+        }
             otraImagen.setAttribute('src',personajes[indiceActual + 1].imagen);
-            otraImagen.setAttribute('data-index',String(indiceActual + 1));
+            otraImagen.setAttribute('data-index',String(indiceActual ));
             otroNombre.textContent = personajes[indiceActual + 1].nombre;
             personajes.splice(indiceActual,1);
-        }
-        else{
-            console.log("juego terminado");
-        }    
+            console.log(indiceActual);
+        
+           
     }
     else{
+        document.querySelector(".final").style.visibility = "visible";
         console.log("juego terminado");
     }
 }
