@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+img{
+    width: 30em;
+    border: 10px solid black;
+    transition: all 200ms;
+}
+img:hover{
+    cursor:pointer;
+    transform: scale(1.02,1.02);
+}
+body{
+    background-image: url('/red-cloud-pattern-background-design-perfect-for-clothing-textile-pillow-fabric-print-and-more-free-vector.jpg');
+   
+}
+.personajes{
+    width: 100%;
+    /* height: 100vh; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+div p, h1{
+    font-size: xx-large;
+    color:white;
+    text-shadow: 
+    2px 2px 5px black,   /* Sombra negra alrededor del texto */
+    -2px -2px 5px black, /* Sombra negra alrededor del texto en dirección contraria */
+    2px -2px 5px black,  /* Sombra negra alrededor del texto en dirección diagonal */
+    -2px 2px 5px black; 
+    margin-bottom: 1em;
+    font-family: 'Ninja Naruto', sans-serif;
+}
+button{
+    margin:5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+button:active{
+    background-color: #225224;
+}
+h1{
+   
+    text-align:center ;
+}
